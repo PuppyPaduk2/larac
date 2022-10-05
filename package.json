@@ -14,11 +14,11 @@
   "homepage": "https://github.com/EvgenyiFedotov/larac#readme",
   "main": "./dist/index.js",
   "types": "./dist/index.d.ts",
-  "man": [
-    "./dist/queue"
-  ],
   "files": [
-    "dist"
+    "dist",
+    "queue",
+    "cycle",
+    "configurator"
   ],
   "devDependencies": {
     "@babel/core": "^7.19.3",

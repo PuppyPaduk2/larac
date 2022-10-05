@@ -1,16 +1,16 @@
-export const wait = (taking) => {
+export const wait = (point) => {
   return new Promise((resolve) => {
-    const unlisten = taking.listen((values) => {
+    const unlisten = point.listen((values) => {
       unlisten();
       resolve(values);
     });
   });
 };
 
-export const ref = (taking) => {
+export const ref = (point) => {
   const state = { current: undefined };
 
-  const unlisten = taking.listen((values) => {
+  const unlisten = point.listen((values) => {
     state.current = values;
   });
 
@@ -20,10 +20,10 @@ export const ref = (taking) => {
   };
 };
 
-export const accum = (taking) => {
+export const accum = (point) => {
   const state = { current: [] };
 
-  const unlisten = taking.listen((values) => {
+  const unlisten = point.listen((values) => {
     state.current.push(values);
   });
 

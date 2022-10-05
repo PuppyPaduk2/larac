@@ -1,3 +1,4 @@
 export { createQueue } from "./queue";
-export type { Queue } from "./queue";
-export type { QueuePoint } from "./queue-take";
+export { Queue } from "./queue";
+export { QueuePoint } from "./queue-take";
+export * as queueUtils from "./utils";
